@@ -1,43 +1,44 @@
 body {
-    font-family: 'Inter', sans-serif;
-    margin: 20px;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 2em;
-  }
+  font-family: 'Inter', sans-serif;
+  margin: 20px;
+  /* Fade-in effect */
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
 
-  a, a:visited {
-    color: black;
- }
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 2em;
+}
 
- a:hover {
-    color: gray;
- }
-  
+a, a:visited {
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+/* Three-column masonry layout for desktop */
+.gallery {
+  column-count: 3;
+  column-gap: 1em;
+}
+
+/* Style for images and videos in the gallery */
+.gallery img,
+.gallery video {
+  width: 100%;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 20px;
+  display: block;
+  margin-bottom: 1em;
+}
+
+/* Single-column layout on mobile */
+@media (max-width: 768px) {
   .gallery {
-    column-count: 3;
-    column-gap: 1em;
+    column-count: 1;
   }
-  
-  .gallery img {
-    border: 2px solid rgb(240, 240, 240);
-    border-radius: 20px;
-    width: 100%;
-    display: block;
-    margin-bottom: 1em;
-  }
-  
-  .gallery video {
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    border: 2px solid rgb(240, 240, 240);
-    border-radius: 20px;
-    display: block;
-    margin-bottom: 1em;
-  }
+}
